@@ -57,10 +57,11 @@ int main() {
     printf("errno: %s\n", strerror(errno));
   }
   printf("Bytes read: %d\n", error);
-  
+
   printf("Verification that written values were the same:\n");
   // 4. Print the contents of second array
   for (i = 0; i < 10; i++) {
     printf("random %d: %d\n", i, new_nums[i]);
   }
+  close(file);
 }
