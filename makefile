@@ -16,6 +16,7 @@ run:
 clean:
 	rm *.o
 	rm *.exe
+	rm random
 
 memcheck:
 	valgrind --leak-check=yes ./program
