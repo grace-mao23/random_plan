@@ -33,7 +33,6 @@ int main() {
 
   printf("Writing numbers to file...\n");
   // 2. Write the array to a file
-  umask(0);
   int file = open("random", O_CREAT | O_RDWR, 0777);
   if (file == -1) {
     printf("errno: %s\n", strerror(errno));
