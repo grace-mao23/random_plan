@@ -32,7 +32,7 @@ int main() {
     printf("random %d: %d\n", i, numbers[i]);
   }
 
-  printf("Writing numbers to file...\n");
+  printf("\nWriting numbers to file...\n");
   // 2. Write the array to a file
   int file = open("random", O_CREAT | O_RDWR, 0777); // create random
   if (file == -1) { // ERROR CHECK
@@ -45,7 +45,7 @@ int main() {
   printf("Bytes written: %d\n", error);
   close(file); // close
 
-  printf("Reading numbers from file...\n");
+  printf("\nReading numbers from file...\n");
   // 3. Read file into a different array
   int new_nums[10]; // new array to be populated
   file = open("random", O_RDONLY);
@@ -58,7 +58,7 @@ int main() {
   }
   printf("Bytes read: %d\n", error);
 
-  printf("Verification that written values were the same:\n");
+  printf("\nVerification that written values were the same:\n");
   // 4. Print the contents of second array
   for (i = 0; i < 10; i++) {
     printf("random %d: %d\n", i, new_nums[i]);
